@@ -8,14 +8,17 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "paymentiq-cashier-bootstrapper": "^1.0.10",
     "react": "16.8.6",
     "react-native": "0.60.5",
-    "react-navigation": "^3.11.0",
     "react-native-gesture-handler": "~1.4.1",
+    "react-native-keyboard-spacer": "^0.4.1",
     "react-native-reanimated": "~1.1.0",
     "react-native-screens": "1.0.0-alpha.22",
     "react-native-unimodules": "~0.5.2",
-    "react-native-web": "^0.11.4"
+    "react-native-web": "^0.11.4",
+    "react-native-webview": "^7.0.3",
+    "react-navigation": "^3.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -26,6 +29,10 @@
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "react-test-renderer": "16.8.6"
+  },
+  "resolutions": {
+    "@babel/core": "^7.5.5",
+    "babel-core": "7.0.0-bridge.0"
   },
   "jest": {
     "preset": "react-native"

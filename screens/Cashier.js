@@ -1,16 +1,31 @@
-import React from 'react';
-import {ScrollView, Text, StyleSheet} from 'react-native';
-//import CashierWebView from '../components/CashierWebview/Webview';
-/* {
-  <CashierWebView />
-}*/
+import React, {Component} from 'react';
+import {View, StyleSheet} from 'react-native';
+import CashierWebView from '../components/CashierWebview/Webview';
+import {withNavigationFocus} from 'react-navigation';
 
-export default function CashierScreen() {
-  return (
-    <ScrollView style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </ScrollView>
-  );
+// export default function CashierScreen() {
+class CashierScreen extends Component {
+  constructor() {
+    super();
+
+    this.shouldReload = false;
+  }
+  componentDidUpdate(prevProps) {
+    if (prevProps.isFocused !== this.props.isFocused) {
+      // Use the `this.props.isFocused` boolean
+      // Call any action
+      console.log('In update set true');
+      this.shouldReload = !this.props.isFocused;
+    }
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <CashierWebView shouldReload={this.shouldReload} />
+      </View>
+    );
+  }
 }
 
 CashierScreen.navigationOptions = {
@@ -20,10 +35,8 @@ CashierScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15,
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingBottom: 15,
     backgroundColor: '#fff',
   },
 });
+
+export default withNavigationFocus(CashierScreen);
