@@ -9,16 +9,19 @@
         <style> html, body { margin: 0px; height: 100%; width: 100%; display: flex; } #cashier { flex-grow: 1; }</style>
     </head>
     <body>
-    <div id='cashier'></div>
+    <!--<div id='cashier'></div>-->
+    <h1>
+      Hell world
+    </h1>
+    <a href='http://www.google.com' target='_blank'>Google</a>
     <script>
 
     var CashierInstance = new _PaymentIQCashier('#cashier', {
-      merchantId: '1014',
-      userId: 'PayTestSE',
+      merchantId: '1000',
+      userId: 'INOVAPAY_BRL',
       environment: 'test',
-      globalSubmit: 'true',
-      mode: 'ecommerce',
       amount: '1499',
+      providerType: 'bank',
       showAccounts: 'inline',
       "scrollToPm": "START",
       "showFooter": false,
