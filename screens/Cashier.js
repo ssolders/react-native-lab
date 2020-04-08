@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 import CashierWebView from '../components/CashierWebview/Webview';
 import {withNavigationFocus} from 'react-navigation';
+// import html from '../components/CashierWebView/index.html';
+// import html2 from '../components/CashierWebView/index2.html';
 
 // export default function CashierScreen() {
 class CashierScreen extends Component {
@@ -20,9 +22,20 @@ class CashierScreen extends Component {
   }
 
   render() {
+    // source={{uri: 'https://hakkespro.github.io/testRepo/cashiern.html'}}
+    // source={html}
+    // source={html2}
+
     return (
       <View style={styles.container}>
-        <CashierWebView shouldReload={this.shouldReload} />
+        <CashierWebView
+          style={{marginTop: 20, flex: 1}}
+          shouldReload={this.shouldReload}
+          source={{
+            // uri: 'https://ssolders.github.io/demo-public-pages/',
+            uri: 'https://ssolders.github.io/demo-public-pages/test1.html',
+          }}
+        />
       </View>
     );
   }

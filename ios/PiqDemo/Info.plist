@@ -45,6 +45,16 @@
 	<array>
 		<string>armv7</string>
 	</array>
+  <key>LSApplicationQueriesSchemes</key>
+  <array>
+   <string>instagram</string>
+   <string>swish</string>
+   <string>bankid</string>
+   <string>vipps</string>
+   <string>mobilepay</string> <!-- danish version -->
+   <string>mobilepayfi</string> <!--finnish version-->
+   <string>mobilepayno</string> <!--norwegian version-->
+  </array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -1,25 +1,45 @@
-import React from 'react';
-import {ScrollView, Text, StyleSheet} from 'react-native';
+import React, {Component} from 'react';
+import {View, StyleSheet} from 'react-native';
+import CashierWebView from '../components/CashierWebview/Webview';
+import {withNavigationFocus} from 'react-navigation';
 
-export default function HostedFieldsScreen() {
-  return (
-    <ScrollView style={styles.container}>
-      <Text>Hosted fields</Text>
-    </ScrollView>
-  );
+// export default function CashierScreen() {
+class CashierScreen extends Component {
+  constructor() {
+    super();
+
+    this.shouldReload = false;
+  }
+  componentDidUpdate(prevProps) {
+    if (prevProps.isFocused !== this.props.isFocused) {
+      // Use the `this.props.isFocused` boolean
+      // Call any action
+      console.log('In update set true');
+      this.shouldReload = !this.props.isFocused;
+    }
+  }
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <CashierWebView
+          shouldReload={this.shouldReload}
+          source={{ uri: `https://hosted-fields-test.netlify.com` }}
+        />
+      </View>
+    );
+  }
 }
 
-HostedFieldsScreen.navigationOptions = {
-  title: 'Hosted fields',
+CashierScreen.navigationOptions = {
+  title: 'Cashier',
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15,
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingBottom: 15,
     backgroundColor: '#fff',
   },
 });
+
+export default withNavigationFocus(CashierScreen);
