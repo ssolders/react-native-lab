@@ -35,46 +35,6 @@ export default class CashierWebView extends React.Component {
     this.setState({ loaded: true }, () => this.webview.injectJavaScript('window.onLoad()'))
   }
 
-  render() {
-    const patchPostMessageFunction = function() {
-      setTimeout(() => {
-        var originalPostMessage = window.postMessage
-        var patchedPostMessage = function(message, targetOrigin, transfer) { 
-          originalPostMessage(message, targetOrigin, transfer)
-        }
-        patchedPostMessage.toString = function() { 
-          return String(Object.hasOwnProperty).replace('hasOwnProperty', 'postMessage')
-        }
-        window.postMessage = patchedPostMessage
-      }, 200)
-    }
-    
-    const patchPostMessageJsCode = '(' + String(patchPostMessageFunction) + ')();';
-    return (
-      <WebView
-        ref={ref => (this.webview = ref)}
-        originWhitelist={['https://*', 'http://*']}
-        source={this.props.source}
-        style={styles.webView}
-        javaScriptEnabled={true}
-        canOpenWindowsAutomatically={true}
-        domStorageEnabled={true}
-        allowingReadAccessToURL={true}
-        onMessage={this.state.loaded ? this.onMessage : null}
-        injectedJavaScript={patchPostMessageJsCode}
-        onNavigationStateChange={this.handleWebViewNavigationStateChange}
-        onLoadStart={this.onLoad}
-        mixedContentMode="always"
-        thirdPartyCookiesEnabled={true}
-        dataDetectorTypes="all"
-        allowUniversalAccessFromFileURLs={true}
-        scalesPageToFit={true}
-        allowFileAccess={true}
-        useWebKit={true}
-      />
-    )
-  }
-
   handleLoadStart(start) {
     console.log('LOAD START')
     console.log(start)
@@ -140,6 +100,46 @@ export default class CashierWebView extends React.Component {
         console.log(`Don't know how to open this URL: ${link}`)
       }
     }
+  }
+
+  render() {
+    const patchPostMessageFunction = function() {
+      setTimeout(() => {
+        var originalPostMessage = window.postMessage
+        var patchedPostMessage = function(message, targetOrigin, transfer) { 
+          originalPostMessage(message, targetOrigin, transfer)
+        }
+        patchedPostMessage.toString = function() { 
+          return String(Object.hasOwnProperty).replace('hasOwnProperty', 'postMessage')
+        }
+        window.postMessage = patchedPostMessage
+      }, 200)
+    }
+    
+    const patchPostMessageJsCode = '(' + String(patchPostMessageFunction) + ')();';
+    return (
+      <WebView
+        ref={ref => (this.webview = ref)}
+        originWhitelist={['https://*', 'http://*']}
+        source={this.props.source}
+        style={styles.webView}
+        javaScriptEnabled={true}
+        canOpenWindowsAutomatically={true}
+        domStorageEnabled={true}
+        allowingReadAccessToURL={true}
+        onMessage={this.state.loaded ? this.onMessage : null}
+        injectedJavaScript={patchPostMessageJsCode}
+        onNavigationStateChange={this.handleWebViewNavigationStateChange}
+        onLoadStart={this.onLoad}
+        mixedContentMode="always"
+        thirdPartyCookiesEnabled={true}
+        dataDetectorTypes="all"
+        allowUniversalAccessFromFileURLs={true}
+        scalesPageToFit={true}
+        allowFileAccess={true}
+        useWebKit={true}
+      />
+    )
   }
 }
 

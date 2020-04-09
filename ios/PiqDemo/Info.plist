@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>PiqDemo</string>
+	<string>cashierapp</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,6 +22,16 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>instagram</string>
+		<string>swish</string>
+		<string>bankid</string>
+		<string>vipps</string>
+		<string>mobilepay</string>
+		<string>mobilepayfi</string>
+		<string>mobilepayno</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -45,16 +55,6 @@
 	<array>
 		<string>armv7</string>
 	</array>
-  <key>LSApplicationQueriesSchemes</key>
-  <array>
-   <string>instagram</string>
-   <string>swish</string>
-   <string>bankid</string>
-   <string>vipps</string>
-   <string>mobilepay</string> <!-- danish version -->
-   <string>mobilepayfi</string> <!--finnish version-->
-   <string>mobilepayno</string> <!--norwegian version-->
-  </array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

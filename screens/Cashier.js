@@ -1,11 +1,9 @@
-import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native';
-import CashierWebView from '../components/CashierWebview/Webview';
-import {withNavigationFocus} from 'react-navigation';
-// import html from '../components/CashierWebView/index.html';
-// import html2 from '../components/CashierWebView/index2.html';
+import React, { Component, Fragment } from 'react'
+import { SafeAreaView, ScrollView, StatusBar, View, StyleSheet } from 'react-native'
+import CashierWebView from '../components/CashierWebview/Webview'
+import {withNavigationFocus} from 'react-navigation'
+import { Colors } from 'react-native/Libraries/NewAppScreen'
 
-// export default function CashierScreen() {
 class CashierScreen extends Component {
   constructor() {
     super();
@@ -27,16 +25,18 @@ class CashierScreen extends Component {
     // source={html2}
 
     return (
-      <View style={styles.container}>
-        <CashierWebView
-          style={{marginTop: 20, flex: 1}}
-          shouldReload={this.shouldReload}
-          source={{
-            // uri: 'https://ssolders.github.io/demo-public-pages/',
-            uri: 'https://ssolders.github.io/demo-public-pages/test1.html',
-          }}
-        />
-      </View>
+      <Fragment>
+        <StatusBar barStyle="dark-content" />
+        <View style={styles.container}>
+          <CashierWebView
+            style={{marginTop: 20, flex: 1}}
+            shouldReload={this.shouldReload}
+            source={{
+              uri: 'https://ssolders.github.io/demo-public-pages/test1.html',
+            }}
+          />
+        </View>
+      </Fragment>
     );
   }
 }
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  scrollView: { backgroundColor: Colors.lighter}
 });
 
 export default withNavigationFocus(CashierScreen);

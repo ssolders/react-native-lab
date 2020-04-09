@@ -11,7 +11,7 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		657875C066BBC2DCC0F24C69 /* libPods-PiqDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 428F17646810F85704377FE0 /* libPods-PiqDemo.a */; };
+		44536F02A0C5833B726F3159 /* libPods-cashierapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 484B2C49B94B1150651D038E /* libPods-cashierapp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,7 +19,7 @@
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PiqDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PiqDemoTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* PiqDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiqDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* cashierapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cashierapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PiqDemo/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PiqDemo/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -27,9 +27,12 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PiqDemo/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PiqDemo/main.m; sourceTree = "<group>"; };
 		14BCDA8B4B23F9DF84E04821 /* Pods-PiqDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiqDemo.release.xcconfig"; path = "Target Support Files/Pods-PiqDemo/Pods-PiqDemo.release.xcconfig"; sourceTree = "<group>"; };
-		428F17646810F85704377FE0 /* libPods-PiqDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PiqDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46404D66670DE19C89804530 /* libPods-PiqDemo-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PiqDemo-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		484B2C49B94B1150651D038E /* libPods-cashierapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cashierapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9361E8F57596B0026F825834 /* Pods-PiqDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiqDemo.debug.xcconfig"; path = "Target Support Files/Pods-PiqDemo/Pods-PiqDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9825909F243F141000299A11 /* cashierapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cashierapp.entitlements; sourceTree = "<group>"; };
+		BABA99522285951D7F3BA4B8 /* Pods-cashierapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cashierapp.release.xcconfig"; path = "Target Support Files/Pods-cashierapp/Pods-cashierapp.release.xcconfig"; sourceTree = "<group>"; };
+		BB9AC2320062242571341FC6 /* Pods-cashierapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cashierapp.debug.xcconfig"; path = "Target Support Files/Pods-cashierapp/Pods-cashierapp.debug.xcconfig"; sourceTree = "<group>"; };
 		BDE9782640D84C6CC28578CA /* libPods-PiqDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PiqDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C191B90FFA4C70892EE0BBFF /* Pods-PiqDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiqDemoTests.release.xcconfig"; path = "Target Support Files/Pods-PiqDemoTests/Pods-PiqDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -42,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				657875C066BBC2DCC0F24C69 /* libPods-PiqDemo.a in Frameworks */,
+				44536F02A0C5833B726F3159 /* libPods-cashierapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,10 +88,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				428F17646810F85704377FE0 /* libPods-PiqDemo.a */,
 				0007E32E1F427E2FFA6BD5F9 /* libPods-PiqDemo-tvOS.a */,
 				46404D66670DE19C89804530 /* libPods-PiqDemo-tvOSTests.a */,
 				BDE9782640D84C6CC28578CA /* libPods-PiqDemoTests.a */,
+				484B2C49B94B1150651D038E /* libPods-cashierapp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,6 +103,8 @@
 				14BCDA8B4B23F9DF84E04821 /* Pods-PiqDemo.release.xcconfig */,
 				F0207BBF1B4092A728F853ED /* Pods-PiqDemoTests.debug.xcconfig */,
 				C191B90FFA4C70892EE0BBFF /* Pods-PiqDemoTests.release.xcconfig */,
+				BB9AC2320062242571341FC6 /* Pods-cashierapp.debug.xcconfig */,
+				BABA99522285951D7F3BA4B8 /* Pods-cashierapp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				9825909F243F141000299A11 /* cashierapp.entitlements */,
 				13B07FAE1A68108700A75B9A /* PiqDemo */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PiqDemoTests */,
@@ -129,7 +135,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* PiqDemo.app */,
+				13B07F961A680F5B00A75B9A /* cashierapp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13B07F861A680F5B00A75B9A /* PiqDemo */ = {
+		13B07F861A680F5B00A75B9A /* cashierapp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PiqDemo" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "cashierapp" */;
 			buildPhases = (
 				EBBBA60DC8E8E7BC94693AE7 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -147,14 +153,15 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				00D4865F3D2A1545AD06FF80 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PiqDemo;
+			name = cashierapp;
 			productName = PiqDemo;
-			productReference = 13B07F961A680F5B00A75B9A /* PiqDemo.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* cashierapp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -166,7 +173,7 @@
 				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "PiqDemo" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "cashierapp" */;
 			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -179,7 +186,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* PiqDemo */,
+				13B07F861A680F5B00A75B9A /* cashierapp */,
 			);
 		};
 /* End PBXProject section */
@@ -197,6 +204,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00D4865F3D2A1545AD06FF80 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cashierapp/Pods-cashierapp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-cashierapp/Pods-cashierapp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-cashierapp/Pods-cashierapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,7 +250,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PiqDemo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-cashierapp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -281,12 +305,13 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9361E8F57596B0026F825834 /* Pods-PiqDemo.debug.xcconfig */;
+			baseConfigurationReference = BB9AC2320062242571341FC6 /* Pods-cashierapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = cashierapp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 373U5R7G66;
+				DEVELOPMENT_TEAM = J3KCQD3CQK;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PiqDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -299,19 +324,20 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = PiqDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = io.paymentiq.native.cashierapp;
+				PRODUCT_NAME = cashierapp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14BCDA8B4B23F9DF84E04821 /* Pods-PiqDemo.release.xcconfig */;
+			baseConfigurationReference = BABA99522285951D7F3BA4B8 /* Pods-cashierapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = cashierapp.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 373U5R7G66;
+				DEVELOPMENT_TEAM = J3KCQD3CQK;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PiqDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -324,8 +350,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = PiqDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = io.paymentiq.native.cashierapp;
+				PRODUCT_NAME = cashierapp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -432,7 +458,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PiqDemo" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "cashierapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -441,7 +467,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "PiqDemo" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "cashierapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

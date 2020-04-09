@@ -1,4 +1,4 @@
-rootProject.name = 'PiqDemo'
+rootProject.name = 'cashierapp'
 include ':react-native-payments'
 project(':react-native-payments').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-payments/android')
 include ':react-native-payments'

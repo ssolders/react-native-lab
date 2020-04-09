@@ -1,159 +1,162 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import {SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar, Button, Alert} from 'react-native';
 import {Header, Colors} from 'react-native/Libraries/NewAppScreen';
-
 const PaymentRequest = require('react-native-payments').PaymentRequest;
 
-const METHOD_DATA = [{
-  supportedMethods: ['apple-pay'],
-  data: {
-    merchantIdentifier: 'merchant.apple.test',
-    supportedNetworks: ['visa', 'mastercard', 'amex'],
-    countryCode: 'US',
-    currencyCode: 'USD'
-  }
-}];
+class HomeScreen extends Component {
+  constructor() {
+    super();
 
-const DETAILS = {
-  id: 'basic-example',
-  displayItems: [
-    {
-      label: 'Movie Ticket',
-      amount: { currency: 'USD', value: '15.00' }
-    },
-    {
-      label: 'Grocery',
-      amount: { currency: 'USD', value: '5.00' }
+    this.applePayConfig = {
+      METHOD_DATA: [{
+      supportedMethods: ['apple-pay'],
+      data: {
+        merchantIdentifier: 'merchant.com.paymentiqtest',
+        supportedNetworks: ['visa', 'mastercard', 'amex'],
+        countryCode: 'SE',
+        currencyCode: 'SEK'
+      }
+      }],
+      DETAILS: {
+        id: 'basic-example',
+        displayItems: [
+          {
+            label: 'Deposit',
+            amount: { currency: 'SEK', value: '200.00' }
+          }
+        ],
+        shippingOptions: [{
+          id: 'economy',
+          label: 'Economy Shipping',
+          amount: { currency: 'SEK', value: '0.00' },
+          detail: 'Arrives in 3-5 days' // `detail` is specific to React Native Payments
+        }],
+        total: {
+          label: 'Devcode',
+          amount: { currency: 'SEK', value: '200.00' }
+        }
+      },
+      OPTIONS: {
+        requestPayerName: true,
+        requestPayerPhone: true,
+        requestPayerEmail: true,
+        requestShipping: true
+      }
     }
-  ],
-  shippingOptions: [{
-    id: 'economy',
-    label: 'Economy Shipping',
-    amount: { currency: 'USD', value: '0.00' },
-    detail: 'Arrives in 3-5 days' // `detail` is specific to React Native Payments
-  }],
-  total: {
-    label: 'Enappd Store',
-    amount: { currency: 'USD', value: '20.00' }
   }
-};
-const OPTIONS = {
-  requestPayerName: true,
-  requestPayerPhone: true,
-  requestPayerEmail: true,
-  requestShipping: true
-};
 
-const paymentRequest = new PaymentRequest(METHOD_DATA, DETAILS, OPTIONS);
+  componentDidMount () {
+    const { METHOD_DATA, DETAILS, OPTIONS } = this.applePayConfig
+    this.paymentRequest = new PaymentRequest(METHOD_DATA, DETAILS, OPTIONS)
 
-
-paymentRequest.addEventListener('shippingaddresschange', e => {
-  const updatedDetails = getUpdatedDetailsForShippingAddress(paymentRequest.shippingAddress);
-
-  e.updateWith(updatedDetails);
-});
-
-paymentRequest.addEventListener('shippingoptionchange', e => {
-  const updatedDetails = getUpdatedDetailsForShippingOption(paymentRequest.shippingOption);
-
-  e.updateWith(updatedDetails);
-});
-
-// check = () => {
-//   console.log(paymentRequest)
-//   paymentRequest.canMakePayments().then((canMakePayment) => {
-//     if (canMakePayment) {
-//       Alert.alert(
-//         'Apple Pay',
-//         'Apple Pay is available in this device'
-//       );
-//     }
-//   }).catch(err => {
-//     console.error(err)
-//   })
-// }
+    this.paymentRequest.addEventListener('shippingaddresschange', e => {
+      const updatedDetails = getUpdatedDetailsForShippingAddress(paymentRequest.shippingAddress);
+    
+      e.updateWith(updatedDetails);
+    })
+    
+    this.paymentRequest.addEventListener('shippingoptionchange', e => {
+      const updatedDetails = getUpdatedDetailsForShippingOption(paymentRequest.shippingOption);
+    
+      e.updateWith(updatedDetails);
+    })
+  }
 
 
-pay = () => {
-    paymentRequest.canMakePayments().then((canMakePayment) => {
-    if (canMakePayment) {
-      console.log('Can Make Payment')
-      paymentRequest.show()
-        .then(paymentResponse => {
-          // Your payment processing code goes here
+  check () {
+    console.log(this.paymentRequest)
+    const { paymentRequest } = this
+    if (paymentRequest) {
+      paymentRequest.canMakePayments().then((canMakePayment) => {
+        if (canMakePayment) {
+          Alert.alert(
+            'Apple Pay',
+            'Apple Pay is available in this device'
+          );
+        } else {
+          Alert.alert(
+            'Apple Pay',
+            'Apple Pay is not available on this device'
+          );
+        }
+      }).catch(err => {
+        console.error(err)
+      })
+    } else {
+      Alert.alert(`this.paymentRequest is not defined`);
+    }
+  }
+
+  pay () {
+    const { paymentRequest } = this
+      paymentRequest.canMakePayments().then((canMakePayment) => {
+      if (canMakePayment) {
+        paymentRequest.show().then(paymentResponse => {
+            // Your payment processing code goes here
 
           paymentResponse.complete('success');
-        });
-    }
-    else {
-      console.log('Cant Make Payment')
-    }
-  })
-}
+        }).catch(error => {
+          console.error(error)
+        }) 
+      } else {
+        console.log('Cant Make Payment')
+      }
+    })
+  }
 
-const App = () => {
-  return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
+  render () {
+    return (
+      <Fragment>
+        <StatusBar barStyle="dark-content" />
+        <SafeAreaView>
+          <ScrollView
+            contentInsetAdjustmentBehavior="automatic"
+            style={styles.scrollView}>
+            <Header />
+            {global.HermesInternal == null ? null : (
+              <View style={styles.engine}>
+                <Text style={styles.footer}>Engine: Hermes</Text>
+              </View>
+            )}
+            <View style={styles.body}>
+              <View style={styles.sectionContainer}>
+                <View>
+                  <Text style={styles.sectionTitle}>Cart</Text>
+                  <Text style={styles.sectionDescription}>
+                    Simulating your cart items in an app
+                </Text>
+                </View>
+              </View>
+              <View style={styles.itemContainer}>
+                <View style={styles.itemDetail}>
+                  <Text style={styles.itemTitle}>Deposit 200 SEK</Text>
+                </View>
+                <View style={styles.itemPrice}>
+                  <Text>200.00 SEK</Text>
+                </View>
+              </View>
+              <View style={styles.totalContainer}>
+                <View style={styles.itemDetail}>
+                  <Text style={styles.itemTitle}>Total</Text>
+                </View>
+                <View style={styles.itemPrice}>
+                  <Text>200.00 SEK</Text>
+                </View>
+              </View>
+              <Button style={styles.payButton}
+                title="Pay with Apple Pay"
+                onPress={() => this.pay()} />
             </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <View>
-                <Text style={styles.sectionTitle}>Cart</Text>
-                <Text style={styles.sectionDescription}>
-                  Simulating your cart items in an app
-              </Text>
-              </View>
-            </View>
-            <View style={styles.itemContainer}>
-              <View style={styles.itemDetail}>
-                <Text style={styles.itemTitle}>Movie Ticket</Text>
-                <Text style={styles.itemDescription}>
-                  Some description
-              </Text>
-              </View>
-              <View style={styles.itemPrice}>
-                <Text>USD 15.00</Text>
-              </View>
-            </View>
-            <View style={styles.itemContainer}>
-              <View style={styles.itemDetail}>
-                <Text style={styles.itemTitle}>Grocery</Text>
-                <Text style={styles.itemDescription}>
-                  Some description
-              </Text>
-              </View>
-              <View style={styles.itemPrice}>
-                <Text>USD 5.00</Text>
-              </View>
-            </View>
-            <View style={styles.totalContainer}>
-              <View style={styles.itemDetail}>
-                <Text style={styles.itemTitle}>Total</Text>
-              </View>
-              <View style={styles.itemPrice}>
-                <Text>USD 20.00</Text>
-              </View>
-            </View>
+
             <Button style={styles.payButton}
-              title="Pay with Apple Pay"
-              onPress={() => this.pay()} />
-            {/* <ApplePayButton /> */}
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </Fragment>
-  );
-};
+                title="Check Apple Pay"
+                onPress={() => this.check()} />
+          </ScrollView>
+        </SafeAreaView>
+      </Fragment>
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   scrollView: { backgroundColor: Colors.lighter},
@@ -172,4 +175,4 @@ const styles = StyleSheet.create({
   footer: {color: Colors.dark,fontSize: 12,fontWeight: '600',padding: 4,paddingRight: 12,textAlign: 'right',},
 });
 
-export default App;
+export default HomeScreen
