@@ -4564,9 +4564,9 @@ lodash.unescape@4.0.1:
   integrity sha1-vyJJiGzlFM2hEvrpIYzcBlIR/Jw=
 
 lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.6.1:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 log-symbols@^2.2.0:
   version "2.2.0"
@@ -5941,10 +5941,10 @@ react-native-keyboard-spacer@^0.4.1:
   resolved "https://registry.yarnpkg.com/react-native-keyboard-spacer/-/react-native-keyboard-spacer-0.4.1.tgz#46f18a320432098a25ea9fa89f5143dd254d332d"
   integrity sha1-RvGKMgQyCYol6p+on1FD3SVNMy0=
 
-react-native-payments@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/react-native-payments/-/react-native-payments-0.7.1.tgz#aaa28a6aac7639acbf4b239629f40111bfa5f73c"
-  integrity sha512-NXal4tTP8ov5nmdHhyME2BHnl2LUuGi2QoVFJgDemW+RnNEe+f6NTCOPIW8ipTT9qT6TuUNHxbYFCk49Z0p1pw==
+"react-native-payments@github:nabilfreeman/react-native-payments#package-json-hack":
+  version "0.7.2"
+  uid e20f0757067f903500bf681c212df6c483af095d
+  resolved "https://codeload.github.com/nabilfreeman/react-native-payments/tar.gz/e20f0757067f903500bf681c212df6c483af095d"
   dependencies:
     es6-error "^4.0.2"
     uuid "^3.1.0"
