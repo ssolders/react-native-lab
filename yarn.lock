@@ -5941,10 +5941,10 @@ react-native-keyboard-spacer@^0.4.1:
   resolved "https://registry.yarnpkg.com/react-native-keyboard-spacer/-/react-native-keyboard-spacer-0.4.1.tgz#46f18a320432098a25ea9fa89f5143dd254d332d"
   integrity sha1-RvGKMgQyCYol6p+on1FD3SVNMy0=
 
-react-native-payments@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/react-native-payments/-/react-native-payments-0.7.1.tgz#aaa28a6aac7639acbf4b239629f40111bfa5f73c"
-  integrity sha512-NXal4tTP8ov5nmdHhyME2BHnl2LUuGi2QoVFJgDemW+RnNEe+f6NTCOPIW8ipTT9qT6TuUNHxbYFCk49Z0p1pw==
+"react-native-payments@github:nabilfreeman/react-native-payments#package-json-hack":
+  version "0.7.2"
+  uid e20f0757067f903500bf681c212df6c483af095d
+  resolved "https://codeload.github.com/nabilfreeman/react-native-payments/tar.gz/e20f0757067f903500bf681c212df6c483af095d"
   dependencies:
     es6-error "^4.0.2"
     uuid "^3.1.0"
@@ -7694,9 +7694,9 @@ xtend@^4.0.0, xtend@~4.0.1:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
