@@ -3292,9 +3292,9 @@ githulk@0.0.x:
     mana "0.1.x"
 
 glob-parent@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.0.0.tgz#1dc99f0f39b006d3e92c2c284068382f0c20e954"
-  integrity sha512-Z2RwiujPRGluePM6j699ktJYxmPpJKCfpGA13jz2hmFZC7gKetzrWvg5KN3+OsIFmydGyZ1AVwERCq1w/ZZwRg==
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
+  integrity sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==
   dependencies:
     is-glob "^4.0.1"
 
@@ -5941,10 +5941,10 @@ react-native-keyboard-spacer@^0.4.1:
   resolved "https://registry.yarnpkg.com/react-native-keyboard-spacer/-/react-native-keyboard-spacer-0.4.1.tgz#46f18a320432098a25ea9fa89f5143dd254d332d"
   integrity sha1-RvGKMgQyCYol6p+on1FD3SVNMy0=
 
-react-native-payments@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/react-native-payments/-/react-native-payments-0.7.1.tgz#aaa28a6aac7639acbf4b239629f40111bfa5f73c"
-  integrity sha512-NXal4tTP8ov5nmdHhyME2BHnl2LUuGi2QoVFJgDemW+RnNEe+f6NTCOPIW8ipTT9qT6TuUNHxbYFCk49Z0p1pw==
+"react-native-payments@github:nabilfreeman/react-native-payments#package-json-hack":
+  version "0.7.2"
+  uid e20f0757067f903500bf681c212df6c483af095d
+  resolved "https://codeload.github.com/nabilfreeman/react-native-payments/tar.gz/e20f0757067f903500bf681c212df6c483af095d"
   dependencies:
     es6-error "^4.0.2"
     uuid "^3.1.0"
