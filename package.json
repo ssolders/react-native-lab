@@ -11,7 +11,7 @@
     "hosted-fields-sdk": "latest",
     "paymentiq-cashier-bootstrapper": "latest",
     "react": "16.8.6",
-    "react-native": "0.60.5",
+    "react-native": "0.62.3",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-keyboard-spacer": "^0.4.1",
     "react-native-payments": "github:nabilfreeman/react-native-payments#package-json-hack",
