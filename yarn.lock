@@ -5941,10 +5941,10 @@ react-native-keyboard-spacer@^0.4.1:
   resolved "https://registry.yarnpkg.com/react-native-keyboard-spacer/-/react-native-keyboard-spacer-0.4.1.tgz#46f18a320432098a25ea9fa89f5143dd254d332d"
   integrity sha1-RvGKMgQyCYol6p+on1FD3SVNMy0=
 
-react-native-payments@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/react-native-payments/-/react-native-payments-0.7.1.tgz#aaa28a6aac7639acbf4b239629f40111bfa5f73c"
-  integrity sha512-NXal4tTP8ov5nmdHhyME2BHnl2LUuGi2QoVFJgDemW+RnNEe+f6NTCOPIW8ipTT9qT6TuUNHxbYFCk49Z0p1pw==
+"react-native-payments@github:nabilfreeman/react-native-payments#package-json-hack":
+  version "0.7.2"
+  uid e20f0757067f903500bf681c212df6c483af095d
+  resolved "https://codeload.github.com/nabilfreeman/react-native-payments/tar.gz/e20f0757067f903500bf681c212df6c483af095d"
   dependencies:
     es6-error "^4.0.2"
     uuid "^3.1.0"
@@ -7140,9 +7140,9 @@ tmp@^0.0.33:
     os-tmpdir "~1.0.2"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
